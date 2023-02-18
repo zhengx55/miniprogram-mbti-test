@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="header">
+    <text>2</text>
+    <view class="vertical-divider" />
+    <!-- <image src="" mode=""/>
+  
+    <image src="" mode=""/> -->
+    <text>2</text>
+  </view>
+  <text>如何找对职业跑道,\n超越同龄人?</text>
+
+  <view class="btn-container">
+    <button class="btn">
+      <view>
+        分享
+      </view>
+    </button>
+    <button class="btn" bindtap="toProfilePage">
+      <view>
+        GO
+      </view>
+    </button>
+  </view>
+
+  <view class="my-report">
+
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view class="container">
+  <view class="result-header">
+
+  </view>
+  <view style="margin-top: 40rpx;">
+    你已经完成了测试!
+  </view>
+  <view style="margin-top: 60rpx;">
+    我们将通过小程序"服务通知"的方式发送测试报告信息，方便你将来可通过"服务通知"直接进入测试报告。
+  </view>
+  <view style="margin-top: 60rpx;">
+    根据小程序规范, 你需要再下一个弹出框中选择【确定】。
+  </view>
+  <image src="" mode="" class="qr-code-img" />
+  <button class="subsrcibe-btn" bindtap="handleSubscribe">我知道了</button>
+</view>

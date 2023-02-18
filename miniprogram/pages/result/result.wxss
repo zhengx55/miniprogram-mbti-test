@@ -1,0 +1,9 @@
+/* pages/result/result.wxss */
+.container {
+  padding: 40rpx 70rpx;
+}
+.subsrcibe-btn{
+  width: 100% !important;
+  background-color: blue;
+  color: #fff;
+}

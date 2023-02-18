@@ -1,0 +1,51 @@
+/* pages/profile/profile.wxss */
+.container {
+  height: 100%;
+  padding: 20rpx 40rpx;
+  background: linear-gradient(33deg, #F78FAD, #FDEB82);
+  -webkit-overflow-scrolling: touch;
+}
+
+.subtitle {
+  margin-top: 40rpx;
+}
+
+.options {
+  min-width: 200rpx;
+  text-align: center;
+  height: max-content;
+  background-color: #e6e6e6;
+  padding: 5rpx 30rpx;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+  font-weight: 300;
+}
+
+.select-container {
+  flex-shrink: 0;
+  padding: 20rpx;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  margin: 20rpx 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 50rpx;
+  row-gap: 30rpx;
+  box-sizing: border-box;
+}
+
+
+.btn {
+  width: 100% !important;
+  margin-top: 100rpx;
+  background: linear-gradient(to right, red, yellow);
+  border-radius: 16rpx;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.active {
+  background-color: red;
+}

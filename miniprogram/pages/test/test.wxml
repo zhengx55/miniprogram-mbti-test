@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="test-index">
+    {{currentQuestion}}/{{questions.length}} 题
+  </view>
+  <view class="progress-bar-container">
+    <view class="progress-bar" style="width:{{progressLength}}" />
+  </view>
+  <view class="question" bindtap="onSelectHandler" data-id="{{questions[currentQuestion - 1].id}}">
+    {{questions[currentQuestion - 1].question}}
+  </view>
+  <view class="option {{userSelected[currentQuestion - 1].answer === 'A' ? 'active' : ''}}" hover-class="option-hover" bindtap="onSelectHandler" data-id="{{questions[currentQuestion - 1].id}}" data-options="A">
+    {{questions[currentQuestion - 1].optionsA}}
+  </view>
+  <view class="option {{userSelected[currentQuestion - 1].answer === 'B' ? 'active' : ''}}" hover-class="option-hover" bindtap="onSelectHandler" data-id="{{questions[currentQuestion - 1].id}}" data-options="B">
+    {{questions[currentQuestion - 1].optionsB}}
+  </view>
+  <view class="navigator">
+    <button class="navigator-btn" bindtap="onPrevHandler">上一题</button>
+    <button class="navigator-btn" bindtap="onNextHandler">下一题</button>
+  </view>
+  <view class="submit-container">
+    <button class="btn" bindtap="onSaveHandler">保存</button>
+    <button class="btn" bindtap="onSubmitHandler">提交</button>
+  </view>
+</view>
