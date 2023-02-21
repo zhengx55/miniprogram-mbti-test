@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="page-intr">
+    * 本测评系统基于MBTI原理设计开发，结果主要依赖于您的答题模式，本报告性格描述仅提供简易分析报告。
+  </view>
+  <view class="report-title">
+    MBTI测试分析报告
+  </view>
+  <button open-type="share" class="share_button">分享报告
+  </button>
+</view>

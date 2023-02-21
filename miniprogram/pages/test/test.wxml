@@ -5,7 +5,7 @@
   <view class="progress-bar-container">
     <view class="progress-bar" style="width:{{progressLength}}" />
   </view>
-  <view class="question" bindtap="onSelectHandler" data-id="{{questions[currentQuestion - 1].id}}">
+  <view class="question">
     {{questions[currentQuestion - 1].question}}
   </view>
   <view class="option {{userSelected[currentQuestion - 1].answer === 'A' ? 'active' : ''}}" hover-class="option-hover" bindtap="onSelectHandler" data-id="{{questions[currentQuestion - 1].id}}" data-options="A">

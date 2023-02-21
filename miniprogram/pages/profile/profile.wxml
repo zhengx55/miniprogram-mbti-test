@@ -1,30 +1,30 @@
 <scroll-view class="container" scroll-y="true" enable-passive>
-  <text style="display: block;">*请完善你的资料，更有助于分析您的性格</text>
-  <view class="subtitle">性别</view>
-  <view class="select-container gender">
+  <text class="title" style="display: block;">* 请完善你的资料，更有助于分析您的性格</text>
+  <view class="subtitle">性别:</view>
+  <view class="select-container">
     <block wx:for="{{genderOptions}}" wx:key="*this">
       <view class="options {{userSelected.gender === item? 'active' : ''}}" bindtap="handleSelect" data-item="{{item}}" data-category="gender">
         {{item}}
       </view>
     </block>
   </view>
-  <view class="subtitle">工作经验</view>
+  <view class="subtitle">工作经验:</view>
   <view class="select-container">
     <block wx:for="{{experienceOptions}}" wx:key="*this">
-      <view class="options {{userSelected.experience === item? 'active' : ''}}" bindtap="handleSelect" data-item="{{item}}" data-category="experience">
+      <view class="options {{index===0?'large':''}} {{userSelected.experience===item? 'active' : '' }}" bindtap="handleSelect" data-item="{{item}}" data-category="experience">
         {{item}}
       </view>
     </block>
   </view>
-  <view class="subtitle">所属行业</view>
+  <view class="subtitle">所属行业:</view>
   <view class="select-container">
     <block wx:for="{{industryOptions}}" wx:key="*this">
-      <view class="options {{userSelected.industry === item? 'active' : ''}}" bindtap="handleSelect" data-item="{{item}}" data-category="industry">
+      <view class="options {{index===0?'large':''}} {{userSelected.industry === item? 'active' : ''}}" bindtap="handleSelect" data-item="{{item}}" data-category="industry">
         {{item}}
       </view>
     </block>
   </view>
-  <view class="subtitle">工作行业</view>
+  <view class="subtitle">工作行业:</view>
   <view class="select-container">
     <block wx:for="{{currentJobOptions}}" wx:key="*this">
       <view class="options {{userSelected.current === item? 'active' : ''}}" bindtap="handleSelect" data-item="{{item}}" data-category="current">

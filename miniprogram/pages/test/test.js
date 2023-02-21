@@ -19,16 +19,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options) {
-    this.openId = await getApp().getOpenid()
     this.setData({
       questions: Questions
-    }, () => {
+    }, async () => {
+      this.openId = await getApp().getOpenid()
       let storage_answers = wx.getStorageSync(this.openId)
       if (storage_answers) {
         this.setData({
           userSelected: storage_answers,
-          progressLength: `${storage_answers.length / this.data.questions.length * 100}%`
-
+          progressLength: `${storage_answers.length / this.data.questions.length * 100}%`,
+          createTime: db.serverDate()
         })
       }
     })
@@ -144,10 +144,6 @@ Page({
       }
     }).then((res) => {
       wx.hideLoading()
-      wx.showToast({
-        title: '提交成功',
-        icon: 'success'
-      })
       wx.clearStorageSync(this.openId)
       wx.navigateTo({
         url: '/pages/result/result',
