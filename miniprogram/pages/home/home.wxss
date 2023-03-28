@@ -32,6 +32,17 @@
   background: transparent;
   box-shadow: inset 10rpx -10rpx 8rpx 10rpx rgba(79, 135, 46, 0.35), 0rpx 10rpx 65rpx 0rpx #3A5D15, 0rpx 4rpx 8rpx 0rpx rgba(79, 135, 46, 0.35);
   border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.my-report .no-report {
+  font-size: 40rpx;
+  font-family: MFLI;
+  font-weight: 400;
+  color: #1C1717;
 }
 
 
@@ -49,7 +60,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-end;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.9);
   box-shadow: -4rpx 7rpx 0rpx 0rpx rgba(58, 93, 21, 0.95);
@@ -61,4 +71,64 @@
   color: #000000;
   margin-left: auto;
   margin-top: 20rpx;
+
+}
+
+.report-swiper {
+  padding: 40rpx;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.report-btn {
+  padding: 0 15rpx !important;
+  margin: 0 !important;
+  width: max-content !important;
+  height: 60rpx;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  box-shadow: -4rpx 7rpx 0rpx 0rpx rgba(58, 93, 21, 0.95);
+  border-radius: 29rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 28rpx;
+}
+
+.qr-code-img {
+  width: 100%;
+}
+
+.mask {
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.modal {
+  z-index: 1000;
+  position: absolute;
+  background-color: #CCCCCC;
+  width: 80%;
+  left: 10%;
+  top: 20%;
+  animation: popupAnimate .5s ease-in forwards;
+}
+
+@keyframes popupAnimate {
+  0% {
+    opacity: 0;
+    scale: 0;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
 }

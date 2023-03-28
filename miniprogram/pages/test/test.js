@@ -28,44 +28,9 @@ Page({
         this.setData({
           userSelected: storage_answers,
           progressLength: `${storage_answers.length / this.data.questions.length * 100}%`,
-          createTime: db.serverDate()
         })
       }
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() { },
-
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
   },
 
   onNextHandler() {
@@ -140,7 +105,8 @@ Page({
     db.collection('mbti-result').add({
       data: {
         result: result,
-        detail: sum
+        detail: sum,
+        createTime: db.serverDate()
       }
     }).then((res) => {
       wx.hideLoading()

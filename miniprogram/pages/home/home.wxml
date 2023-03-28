@@ -1,6 +1,12 @@
 <view class="page">
+  <root-portal wx:if="{{show}}">
+    <view class="mask" bindtap="onCloseModal" />
+    <view class="modal">
+      <image src="https://636c-cloud1-6gbezp7fd83b299f-1316859772.tcb.qcloud.la/%E5%85%AC%E4%BC%97%E5%8F%B7.jpeg?sign=455cadbb1a47bccab74007204d544665&t=1677055865" mode="widthFix" class="qr-code-img" show-menu-by-longpress="true" />
+    </view>
+  </root-portal>
   <view class="container">
-    <view class="follow-btn">关注公众号</view>
+    <view class="follow-btn" bindtap="showQRCodeHandler">关注公众号</view>
     <view class="btn-container">
       <button open-type="share" class="btn">
         分享
@@ -9,7 +15,28 @@
         GO
       </button>
     </view>
-    <view class="my-report">
+    <view wx:if="{{results.length === 0}}" class="my-report no-report">
+      暂无测试记录
+    </view>
+    <view wx:else class="my-report">
+      <swiper class="report-swiper">
+        <block wx:for="{{results}}" wx:key="_id">
+          <swiper-item>
+            <view style="display: flex; justify-content: space-between; align-items: center;">
+              <view style="display: flex; flex-direction: column; row-gap: 20rpx;">
+                <view class="result-item">
+                  {{item.result}}
+                </view>
+                <view class="result-item">
+                  {{item.createTime}}
+                </view>
+              </view>
+              <button data-result="{{item.result}}" data-detail="{{item.detail}}" class="report-btn" bindtap="onReadHandler">查看报告</button>
+            </view>
+
+          </swiper-item>
+        </block>
+      </swiper>
     </view>
   </view>
 </view>

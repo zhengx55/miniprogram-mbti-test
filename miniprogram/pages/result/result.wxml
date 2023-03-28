@@ -1,6 +1,5 @@
 <view class="container">
   <view class="result-header">
-
   </view>
   <view style="margin-top: 40rpx;">
     你已经完成了测试!
@@ -11,6 +10,6 @@
   <view style="margin-top: 60rpx;">
     根据小程序规范, 你需要再下一个弹出框中选择【确定】。
   </view>
-  <image src="" mode="" class="qr-code-img" />
+  <image src="https://636c-cloud1-6gbezp7fd83b299f-1316859772.tcb.qcloud.la/%E5%85%AC%E4%BC%97%E5%8F%B7.jpeg?sign=455cadbb1a47bccab74007204d544665&t=1677055865" mode="widthFix" class="qr-code-img" show-menu-by-longpress="true" />
   <button class="subsrcibe-btn" bindtap="handleSubscribe">我知道了</button>
 </view>

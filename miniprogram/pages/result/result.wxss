@@ -2,8 +2,14 @@
 .container {
   padding: 40rpx 70rpx;
 }
-.subsrcibe-btn{
+
+.subsrcibe-btn {
   width: 100% !important;
   background-color: blue;
   color: #fff;
+}
+
+.qr-code-img {
+  margin: 70rpx 0;
+  width: 100%;
 }

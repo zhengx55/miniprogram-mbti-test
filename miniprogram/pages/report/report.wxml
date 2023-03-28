@@ -1,10 +1,104 @@
-<view class="container">
+<scroll-view scroll-y="true" class="container">
   <view class="page-intr">
     * 本测评系统基于MBTI原理设计开发，结果主要依赖于您的答题模式，本报告性格描述仅提供简易分析报告。
   </view>
   <view class="report-title">
     MBTI测试分析报告
   </view>
+  <view class="report-tags">
+    <image src="https://636c-cloud1-6gbezp7fd83b299f-1316859772.tcb.qcloud.la/report.png?sign=ce94d64ed1a2d683e626a94e2c9bc405&t=1677037644" mode="aspectFit" class="humen" />
+    <view class="result-title">
+      {{type}}
+    </view>
+    <view class="tags-container">
+      <block wx:for="{{result.tag}}" wx:key="*this">
+        <view class="tags-item">
+          {{item}}
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="score-panel">
+    <view class="score-item">
+      <view>
+        外向 E
+      </view>
+      <view class="bar-container">
+        <text class="score">{{score['E']}}</text>
+        <view class="bar-outer">
+          <view class="bar-inner-left" style="width: {{score['E'] / 12 * 350}}rpx;" />
+          <view class="bar-inner-right" style="width: {{score['I'] / 12 * 350}}rpx;;" />
+        </view>
+        <text class="score-right">{{score['I']}}</text>
+      </view>
+      <view>
+        I 内向
+      </view>
+    </view>
+    <view class="score-item">
+      <view>
+        实感 S
+      </view>
+      <view class="bar-container">
+        <text class="score">{{score['S']}}</text>
+        <view class="bar-outer">
+          <view class="bar-inner-left" style="width: {{score['S'] / 12 * 350}}rpx;" />
+          <view class="bar-inner-right" style="width: {{score['N'] / 12 * 350}}rpx;" />
+        </view>
+        <text class="score-right">{{score['N']}}</text>
+      </view>
+      <view>
+        N 直觉
+      </view>
+    </view>
+    <view class="score-item">
+      <view>
+        思考 T
+      </view>
+      <view class="bar-container">
+        <text class="score">{{score['T']}}</text>
+        <view class="bar-outer">
+          <view class="bar-inner-left" style="width: {{score['T'] / 12 * 350}}rpx;" />
+          <view class="bar-inner-right" style="width: {{score['F'] / 12 * 350}}rpx;" />
+        </view>
+        <text class="score-right">{{score['F']}}</text>
+      </view>
+      <view>
+        F 情感
+      </view>
+    </view>
+    <view class="score-item">
+      <view>
+        判断 J
+      </view>
+      <view class="bar-container">
+        <text class="score">{{score['J']}}</text>
+        <view class="bar-outer">
+          <view class="bar-inner-left" style="width: {{score['J'] / 12 * 350}}rpx;" />
+          <view class="bar-inner-right" style="width: {{score['P'] / 12 * 350}}rpx;" />
+        </view>
+        <text class="score-right">{{score['P']}}</text>
+      </view>
+      <view>
+        P 知觉
+      </view>
+    </view>
+  </view>
+
+
+  <block wx:for="{{result.info}}" wx:key="title">
+    <view class="title">
+      {{item.title}}
+    </view>
+    <view class="description-container">
+      <block wx:for="{{item.des}}" wx:key="*this">
+        <view class="description">
+          {{item}}
+        </view>
+      </block>
+    </view>
+
+  </block>
   <button open-type="share" class="share_button">分享报告
   </button>
-</view>
+</scroll-view>
